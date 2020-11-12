@@ -1,0 +1,81 @@
+ ========================= Model View Controller==============================
+ Model Class - Employee (abstract class), Faculty, office staff.
+ View - JobLetter
+ Controller - Employeer
+
+---------------------- M O T I V E
+# To design a class EMPLOYER that can recruit employees and assign them tasks and their positions.
+# It maintains a list of employees under it.
+
+---------------------FUNCTIONALITY
+$   The employeer will appoint an employee.
+$   Show it to the employee.
+$   put that employee details in arrays of respective colleges.
+
+Employee Class======================
+# Attributes
+   
+  * name
+  * id
+  * basicPay
+  * collegeName
+
+# Member Methods
+  
+  * sevice - A void method which will print a message to stdout
+
+
+
+Faculty Class=======================
+# Attributes
+  * same as Employee Class
+  * department
+
+# Member Methods
+  * inherits from Employee Class
+
+
+Office staff Class================
+# Attributes
+  * same as Employee Class
+  * designation - clerk, groupD, etc.
+
+# member Methods
+  * same as Employee Class
+
+
+Employeer class (Controller)====
+
+
+JobLetter Class (View)==========
+# member Methods
+  * openLetter() - Prints the desc
+
+Main============================
+# takes all kinds of input
+# gives Choice
+  * Recruite
+  * showService()
+
+
+
+
+# COUNT FACULT COLLEGE WISE /
+# search name (filter function)
+# search by job
+# search by deprt of designation/
+
+
+Menu Structure
+# 1 for Faculty
+  * Recruit
+  * Search by Name
+  * Search by College
+  * Search by Department
+  * Show Service
+# 2 for OfficeStaff
+  * Recruit
+  * Search by Name
+  * Search by College
+  * Search by Department
+  * Show Service
