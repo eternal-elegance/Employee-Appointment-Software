@@ -54,7 +54,8 @@ public class Admin {
 				 */
 
 				/* ANOTHER SWITCH */
-				System.out.print("Press 1 for FACULTY MENU\n2 for OFFICESTAFF MENU\n3 to EXIT\nEnter Your Choice: ");
+				System.out.print(
+						"========Press========\n 1 for FACULTY MENU\n2 for OFFICESTAFF MENU\n3 to EXIT\nEnter Your Choice: ");
 				int ch = Integer.parseInt(br.readLine());
 
 				switch (ch) {
@@ -65,7 +66,7 @@ public class Admin {
 
 							System.out.println("=======FACULTY MENU======");
 							System.out.print(
-									"1 to Recruit\n2 to Search by Name\n3 to Search by College Name\n4 to Search by Departmen\n5 Show Service\n6 to exit menu\nEnter Your Choice: ");
+									"1 to Recruit\n2 to Search by Name\n3 to Search by College Name\n4 to Search by Department\n5 Show Service\n6 to search by ID\n7 to exit menu\nEnter Your Choice: ");
 							int choicee = Integer.parseInt(br.readLine());
 
 							switch (choicee) {
@@ -86,7 +87,7 @@ public class Admin {
 									break;
 
 								case 4:
-									System.out.println("Enter Department: ");
+									System.out.print("Enter Department: ");
 									e.searchBy(br.readLine(), 'F');
 									break;
 
@@ -95,6 +96,11 @@ public class Admin {
 									break;
 
 								case 6:
+									System.out.print("Enter ID number: ");
+									e.searchByID(br.readLine(), 'F');
+									break;
+
+								case 7:
 									c = false;
 									break;
 
@@ -111,7 +117,7 @@ public class Admin {
 
 							System.out.println("=======OFFICE STAFF MENU======");
 							System.out.print(
-									"1 to Recruit\n2 to Search by Name\n3 to Search by College Name\n4 to Search by Departmen\n5 Show Service\n6 to exit menu\nEnter Your Choice: ");
+									"1 to Recruit\n2 to Search by Name\n3 to Search by College Name\n4 to Search by Departmen\n5 Show Service\n6 to search by job\n7 to exit menu\nEnter Your Choice: ");
 							int choicee = Integer.parseInt(br.readLine());
 
 							switch (choicee) {
@@ -132,7 +138,7 @@ public class Admin {
 									break;
 
 								case 4:
-									System.out.println("Enter Department: ");
+									System.out.println("Enter Designation: ");
 									e.searchBy(br.readLine(), 'O');
 									break;
 
@@ -141,6 +147,11 @@ public class Admin {
 									break;
 
 								case 6:
+									System.out.print("Enter ID number: ");
+									e.searchByID(br.readLine(), 'O');
+									break;
+
+								case 7:
 									n = false;
 									break;
 

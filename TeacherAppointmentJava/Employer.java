@@ -149,6 +149,39 @@ class Employer {
       System.out.println("No Details of " + readLine + " were found.");
   }
 
+  /* =========SEARCHING BY ID FUNCTION=============== */
+  public void searchByID(String readLine, char c) {
+    boolean bool = false;
+
+    if (c == 'F') {
+
+      for (int iter = 0; iter < Employer.i; iter++) {
+        if (f[iter].getID().equalsIgnoreCase(readLine)) {
+          bool = true;
+          jl.showNameFaculty(f[iter]);
+          break;
+        }
+      }
+
+    }
+
+    else if (c == 'O') {
+
+      for (int twtr = 0; twtr < Employer.j; twtr++) {
+        if ((os[twtr].getID()).equalsIgnoreCase(readLine)) {
+          bool = true;
+          jl.showNameOfficeStaff(os[twtr]);
+          break;
+        }
+      }
+
+    }
+
+    if (!bool)
+      System.out.println("No Details of " + readLine + " were found.");
+
+  }
+
   void filterNames() {
 
   }
