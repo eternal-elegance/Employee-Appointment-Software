@@ -182,7 +182,98 @@ class Employer {
 
   }
 
-  void filterNames() {
+  /* =====NAME FILTER FUNCTION==== */
+  void filterNames(String s, char c) {
+
+    if (c == 'F') {
+
+      int w = 0;
+      Faculty[] t = new Faculty[10];
+      for (int iter = 0; iter < Employer.i; iter++) {
+        String current = f[iter].getName();
+
+        if (current.equalsIgnoreCase(s)) {
+          t[w++] = f[iter];
+        }
+
+        else {
+
+          current = current + "$";
+
+          String sub = "";
+          boolean flag = false;
+
+          int j = 0;
+          while (j < current.length()) {
+
+            while ((current.charAt(j) != ' ') && (current.charAt(j) != '$')) {
+              sub = sub + current.charAt(j);
+              j++;
+            }
+            // System.out.println("substring->" + sub);
+            if (s.equalsIgnoreCase(sub)) {
+              t[w++] = f[iter];
+              flag = true;
+              break;
+            }
+            if (current.charAt(j) == '$' || flag == true)
+              break;
+            else {
+              sub = "";
+              j++;
+            }
+
+          }
+        }
+      }
+      jl.showDetailFaculty(t, w);
+    }
+
+    else if (c == 'O') {
+
+      int w = 0;
+      OfficeStaff[] o = new OfficeStaff[10];
+      for (int iter = 0; iter < Employer.j; iter++) {
+        String current = os[iter].getName();
+
+        if (current.equalsIgnoreCase(s)) {
+          o[w++] = os[iter];
+        }
+
+        else {
+
+          current = current + "$";
+
+          String sub = "";
+          boolean flag = false;
+
+          int j = 0;
+          while (j < current.length()) {
+
+            while ((current.charAt(j) != ' ') && (current.charAt(j) != '$')) {
+              sub = sub + current.charAt(j);
+              j++;
+            }
+
+            if (s.equalsIgnoreCase(sub)) {
+              o[w++] = os[iter];
+              flag = true;
+              break;
+            }
+            if (current.charAt(j) == '$' || flag == true)
+              break;
+            else {
+              sub = "";
+              j++;
+            }
+
+          }
+        }
+      }
+      jl.showDetailOfficeStaff(o, w);
+    }
+
+    else System.out.println("No Details of " + s + " were found.");
 
   }
 

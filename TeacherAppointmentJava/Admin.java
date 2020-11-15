@@ -55,7 +55,7 @@ public class Admin {
 
 				/* ANOTHER SWITCH */
 				System.out.print(
-						"========Press========\n 1 for FACULTY MENU\n2 for OFFICESTAFF MENU\n3 to EXIT\nEnter Your Choice: ");
+						"========Press========\n1 for FACULTY MENU\n2 for OFFICESTAFF MENU\n3 to EXIT\nEnter Your Choice: ");
 				int ch = Integer.parseInt(br.readLine());
 
 				switch (ch) {
@@ -78,7 +78,7 @@ public class Admin {
 
 								case 2:
 									System.out.print("Enter name of employee: ");
-									e.searchByName(br.readLine(), 'F');
+									e.filterNames(br.readLine(), 'F');
 									break;
 
 								case 3:
@@ -129,7 +129,7 @@ public class Admin {
 
 								case 2:
 									System.out.print("Enter name of employee: ");
-									e.searchByName(br.readLine(), 'O');
+									e.filterNames(br.readLine(), 'O');
 									break;
 
 								case 3:
